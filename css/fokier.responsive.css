@@ -1,0 +1,404 @@
+@media (max-width:1300px) {
+    /* nav */
+    nav{
+        height: 11% ;
+    }
+nav .container .links .burger{
+    background-color: transparent;
+    border: var(--main-color) 3px solid;
+    border-radius: 5px;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    top: 10px;
+
+    }
+nav .container .links .burger span{
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+nav .container .links ul{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    background-color: var(--bgColor);
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+    min-width: fit-content;
+    max-height: max-content;
+    height: 0px;
+    overflow: hidden;
+    transition: all 2s ease;
+
+}
+nav .container .links .burger:focus ~ ul{
+height: 280px;
+}
+
+nav .container .links ul li{
+    margin-top: 4px;
+}
+
+/* about */
+
+.about .container{
+    width: 100vh;
+    display: initial ;
+}
+
+.about .container .item1 {
+    left: 40%;
+    height:50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+    
+}
+.about .container .item1 .frame,
+.about .container .item1 .frame .photo{
+    min-width: 200px;
+    min-height: 200px;
+
+}
+.about .container .info {
+    margin-top: 40px;
+    display: block;
+    width: 20%;
+}
+
+.about .container .info .h2{
+   border-left: 2px solid var(--main-color);
+    font-size: 15px;
+    font-weight:300;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.about .container .info p{
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 200;
+
+}
+
+.about .container .info hr{
+    margin-bottom: 10px;
+}
+
+.about .container .info .row .col .item {
+    width: fit-content;
+}
+.about .container .info .row .col .item h4{
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom:4px ;
+
+}
+
+.about .container .info .row .col .item .p{
+    font-size: 7px;
+    font-weight: 200;
+    padding-top: 4px;
+
+
+}
+
+/* services */
+.services .container h2 {
+    font-size: 30px;
+    font-weight: 800;
+
+}
+.services .container .servs{
+    display: block;
+    padding: 0px;
+
+}
+.services .container .servs .serv{
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 243.7px;
+    max-width: 350px;
+
+    margin: 27px auto;
+    transition: all 0.5s ease;
+}
+
+
+/* portfoluo */
+.portfolio .container .web{
+display: block;
+}
+.portfolio .container .web .item{
+    width: 262px;
+    margin: 20px auto;
+
+}
+
+/* blog */
+.blog{
+    margin: 40px;
+    height: 300vh;
+}
+
+.blog .container .vid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height:1750px;
+    margin: 0;
+
+
+}
+.blog .container .vid .post{
+    width: 90%;
+    position: relative;
+}
+
+.blog .container .vid .post h3{
+    margin: 5px;
+}
+.blog .container .vid .post h4{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.blog .container .vid .post p{
+    font-size: 12px;
+    margin: 5px ;
+    line-height: 25px;
+}
+
+.blog .container .vid .post a{
+    position: absolute;
+    bottom: 10px;
+}
+
+
+/* contact */
+
+.contact .container .form{
+    flex-direction: column; 
+    margin: 30px 5%;
+
+}
+.contact .container .form input{
+    height: 40px;
+}
+.contact .container .form input:nth-of-type(1),
+.contact .container .form input:nth-of-type(2){
+    width: 100%;
+}
+.contact .container .form input:nth-of-type(3){
+width: 100%;
+}
+.contact .container .form textarea{
+    padding-top:10px ;
+    height: 200px;
+    width: 100%;
+    resize: none;
+    color: #fff;
+}
+
+
+
+
+
+}
+
+
+
+@media (min-width:371px) and (max-width:1300px) {
+        nav .container .links ul{
+            top: 80px;
+        }
+.about .container .item1 {
+left: 50%;
+}
+.about .container .info{
+
+    margin:40px 20%;
+
+}
+
+
+
+
+}
+@media (min-width:577px) and (max-width:1300px) {
+    nav .container .links ul{
+            top: 85px;
+        }
+        .about .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .about .container .item1 {
+            width: 30%;
+            left: 10%;
+            height:50%;
+            transform: translateX(-50%);
+            top: 0;        }
+        .about .container .item1 .frame{
+            min-width: none;
+            min-height: none;
+
+        }
+        .about .container .info{
+            margin: 10px 0px 10px 50px ;
+        }
+                    .about .container .info .row .col .item h4{
+                font-size: 15px;
+                font-weight: 400;
+                padding-bottom: 4px;
+
+
+            }
+
+            .about .container .info .row .col .item .p{
+                font-size: 10px;
+                font-weight: 200;
+                /* left:2px ; */
+
+
+            }
+
+            /* services */
+            .services .container h2 {
+                font-size: 40px;
+                font-weight: 800;
+
+            }
+            .services .container .servs{
+                display: flex;
+                padding: 0px;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+            }
+            .services .container .servs .serv{
+                border: 2px solid var(--main-color);
+                border-radius: 15px;
+                padding: 30px;
+                text-align: center;
+                width: 45%;
+                /* margin: 27px auto; */
+                transition: all 0.5s ease;
+            }
+
+            /* portfoluo */
+            .portfolio .container .web{
+            display: flex;
+            }
+            .blog{
+    margin: 20px;
+    height: 100vh;
+}
+
+
+.blog .container .vid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height:90vh;
+
+}
+.blog .container .vid .post{
+    width: 31%;
+    height: 90%;
+    position: relative;
+}
+
+.blog .container .vid .post h3{
+    margin: 5px;
+}
+.blog .container .vid .post h4{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.blog .container .vid .post p{
+    font-size: 12px;
+    margin: 5px ;
+    line-height: 25px;
+}
+    }
+
+
+
+@media (min-width:769px) and (max-width:1300px) {}
+
+
+@media (min-width:993px) and (max-width:1300px) {
+    .about .container .item1 {
+            width: 40%;
+            left: 10%;
+            height:50%;
+            transform: translateX(-50%);
+            top: 0;        
+        }
+        .about .container .item1 .frame{
+            min-width: none;
+            min-height: none;
+
+        }
+        .about .container .info{
+            margin: 10px 0px 10px 50px ;
+        }
+               
+
+
+                .about .container .info .row .col .item h4{
+                font-size: 20px;
+                font-weight: 600;
+                padding-bottom: 4px;
+
+
+            }
+               .about .container .info .row .col .item .p{
+                font-size: 15px;
+                font-weight: 400;
+                padding-top: 9px;
+
+
+
+            }
+
+
+            /* services */
+
+             .services .container h2 {
+                font-size: 40px;
+                font-weight: 800;
+
+            }
+            .services .container .servs{
+                display: flex;
+                padding: 0px;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+            }
+            .services .container .servs .serv{
+                border: 2px solid var(--main-color);
+                border-radius: 15px;
+                padding: 15px;
+                text-align: center;
+                width: 22%;
+                transition: all 0.5s ease;
+            }
+}
+@media (min-width:1181px) and (max-width:1300px) {}
