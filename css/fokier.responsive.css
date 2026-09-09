@@ -1,404 +1,597 @@
-@media (max-width:1300px) {
-    /* nav */
-    nav{
-        height: 11% ;
-    }
-nav .container .links .burger{
-    background-color: transparent;
-    border: var(--main-color) 3px solid;
-    border-radius: 5px;
-    width: 50px;
-    height: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-    top: 10px;
-
-    }
-nav .container .links .burger span{
-    display: block;
-    width: 60%;
-    height: 3px;
-    background-color: var(--main-color);
-}
-
-nav .container .links ul{
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 80px;
-    background-color: var(--bgColor);
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    border-radius: 20px;
-    text-align: center;
-    min-width: fit-content;
-    max-height: max-content;
-    height: 0px;
-    overflow: hidden;
-    transition: all 2s ease;
-
-}
-nav .container .links .burger:focus ~ ul{
-height: 280px;
-}
-
-nav .container .links ul li{
-    margin-top: 4px;
-}
-
-/* about */
-
-.about .container{
-    width: 100vh;
-    display: initial ;
-}
-
-.about .container .item1 {
-    left: 40%;
-    height:50%;
-    transform: translateX(-50%);
-    margin-bottom: 30px;
-    
-}
-.about .container .item1 .frame,
-.about .container .item1 .frame .photo{
-    min-width: 200px;
-    min-height: 200px;
-
-}
-.about .container .info {
-    margin-top: 40px;
-    display: block;
-    width: 20%;
-}
-
-.about .container .info .h2{
-   border-left: 2px solid var(--main-color);
-    font-size: 15px;
-    font-weight:300;
-    padding-left: 5px;
-    margin-bottom: 10px;
-}
-.about .container .info p{
-    font-size: 12px;
-    line-height: 1;
-    font-weight: 200;
-
-}
-
-.about .container .info hr{
-    margin-bottom: 10px;
-}
-
-.about .container .info .row .col .item {
-    width: fit-content;
-}
-.about .container .info .row .col .item h4{
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom:4px ;
-
-}
-
-.about .container .info .row .col .item .p{
-    font-size: 7px;
-    font-weight: 200;
-    padding-top: 4px;
+/* =========================================
+   BREAKPOINTS:
+   > 1200px  : Desktop (default - fokir.css)
+   993-1200  : Small Laptop
+   769-992   : Tablet
+   577-768   : Large Mobile
+   ≤ 576px   : Mobile
+   ========================================= */
 
 
-}
+/* =========================================
+   ≤ 1200px : Small Laptop & Below
+   ========================================= */
+@media (max-width: 1200px) {
 
-/* services */
-.services .container h2 {
-    font-size: 30px;
-    font-weight: 800;
-
-}
-.services .container .servs{
-    display: block;
-    padding: 0px;
-
-}
-.services .container .servs .serv{
-    border: 2px solid var(--main-color);
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    width: 243.7px;
-    max-width: 350px;
-
-    margin: 27px auto;
-    transition: all 0.5s ease;
-}
-
-
-/* portfoluo */
-.portfolio .container .web{
-display: block;
-}
-.portfolio .container .web .item{
-    width: 262px;
-    margin: 20px auto;
-
-}
-
-/* blog */
-.blog{
-    margin: 40px;
-    height: 300vh;
-}
-
-.blog .container .vid{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height:1750px;
-    margin: 0;
-
-
-}
-.blog .container .vid .post{
-    width: 90%;
-    position: relative;
-}
-
-.blog .container .vid .post h3{
-    margin: 5px;
-}
-.blog .container .vid .post h4{
-    font-size: 14px;
-    margin-left: 5px;
-}
-
-.blog .container .vid .post p{
-    font-size: 12px;
-    margin: 5px ;
-    line-height: 25px;
-}
-
-.blog .container .vid .post a{
-    position: absolute;
-    bottom: 10px;
-}
-
-
-/* contact */
-
-.contact .container .form{
-    flex-direction: column; 
-    margin: 30px 5%;
-
-}
-.contact .container .form input{
-    height: 40px;
-}
-.contact .container .form input:nth-of-type(1),
-.contact .container .form input:nth-of-type(2){
-    width: 100%;
-}
-.contact .container .form input:nth-of-type(3){
-width: 100%;
-}
-.contact .container .form textarea{
-    padding-top:10px ;
-    height: 200px;
-    width: 100%;
-    resize: none;
-    color: #fff;
-}
-
-
-
-
-
-}
-
-
-
-@media (min-width:371px) and (max-width:1300px) {
-        nav .container .links ul{
-            top: 80px;
-        }
-.about .container .item1 {
-left: 50%;
-}
-.about .container .info{
-
-    margin:40px 20%;
-
-}
-
-
-
-
-}
-@media (min-width:577px) and (max-width:1300px) {
-    nav .container .links ul{
-            top: 85px;
-        }
-        .about .container {
-            display: flex;
-            flex-direction: row;
-        }
-        .about .container .item1 {
-            width: 30%;
-            left: 10%;
-            height:50%;
-            transform: translateX(-50%);
-            top: 0;        }
-        .about .container .item1 .frame{
-            min-width: none;
-            min-height: none;
-
-        }
-        .about .container .info{
-            margin: 10px 0px 10px 50px ;
-        }
-                    .about .container .info .row .col .item h4{
-                font-size: 15px;
-                font-weight: 400;
-                padding-bottom: 4px;
-
-
-            }
-
-            .about .container .info .row .col .item .p{
-                font-size: 10px;
-                font-weight: 200;
-                /* left:2px ; */
-
-
-            }
-
-            /* services */
-            .services .container h2 {
-                font-size: 40px;
-                font-weight: 800;
-
-            }
-            .services .container .servs{
-                display: flex;
-                padding: 0px;
-                flex-wrap: wrap;
-                justify-content: space-around;
-
-            }
-            .services .container .servs .serv{
-                border: 2px solid var(--main-color);
-                border-radius: 15px;
-                padding: 30px;
-                text-align: center;
-                width: 45%;
-                /* margin: 27px auto; */
-                transition: all 0.5s ease;
-            }
-
-            /* portfoluo */
-            .portfolio .container .web{
-            display: flex;
-            }
-            .blog{
-    margin: 20px;
-    height: 100vh;
-}
-
-
-.blog .container .vid{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height:90vh;
-
-}
-.blog .container .vid .post{
-    width: 31%;
-    height: 90%;
-    position: relative;
-}
-
-.blog .container .vid .post h3{
-    margin: 5px;
-}
-.blog .container .vid .post h4{
-    font-size: 14px;
-    margin-left: 5px;
-}
-
-.blog .container .vid .post p{
-    font-size: 12px;
-    margin: 5px ;
-    line-height: 25px;
-}
+    /* NAV - show burger */
+    nav .container .links .burger {
+        background-color: transparent;
+        border: var(--main-color) 3px solid;
+        border-radius: 5px;
+        width: 50px;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
     }
 
+    nav .container .links .burger span {
+        display: block;
+        width: 60%;
+        height: 3px;
+        background-color: var(--main-color);
+    }
+
+    nav .container .links ul {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 75px;
+        background-color: var(--bgColor);
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        min-width: 280px;
+        border-radius: 20px;
+        text-align: center;
+        max-height: max-content;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        padding: 0;
+        gap: 10px;
+    }
+
+    nav .container .links .burger:focus ~ ul,
+    nav .container .links ul:hover {
+        height: 280px;
+        padding: 20px 0;
+    }
+
+    nav .container .links ul li {
+        margin: 4px 0;
+    }
+}
 
 
-@media (min-width:769px) and (max-width:1300px) {}
+/* =========================================
+   993px - 1200px : Small Laptop
+   ========================================= */
+@media (min-width: 993px) and (max-width: 1200px) {
 
+    /* ABOUT */
+    .about .container {
+        width: 95%;
+    }
 
-@media (min-width:993px) and (max-width:1300px) {
     .about .container .item1 {
-            width: 40%;
-            left: 10%;
-            height:50%;
-            transform: translateX(-50%);
-            top: 0;        
-        }
-        .about .container .item1 .frame{
-            min-width: none;
-            min-height: none;
+        width: 40%;
+        height: 85%;
+    }
 
-        }
-        .about .container .info{
-            margin: 10px 0px 10px 50px ;
-        }
-               
+    .about .container .info {
+        width: 45%;
+        margin-left: 5%;
+    }
 
+    .about .container .info .row .col .item h4 {
+        font-size: 17px;
+    }
 
-                .about .container .info .row .col .item h4{
-                font-size: 20px;
-                font-weight: 600;
-                padding-bottom: 4px;
+    .about .container .info .row .col .item p {
+        font-size: 14px;
+    }
 
+    /* SERVICES */
+    .services .container .servs .serv {
+        width: 22%;
+        padding: 20px 15px;
+    }
 
-            }
-               .about .container .info .row .col .item .p{
-                font-size: 15px;
-                font-weight: 400;
-                padding-top: 9px;
+    /* PORTFOLIO */
+    .portfolio .container .web .item {
+        width: 30%;
+    }
 
+    /* BLOG */
+    .blog {
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 20px;
+    }
 
+    .blog .container .vid {
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
 
-            }
+    .blog .container .vid .post {
+        width: 30%;
+        height: auto;
+        min-height: 480px;
+        position: relative;
+        padding-bottom: 60px;
+    }
 
-
-            /* services */
-
-             .services .container h2 {
-                font-size: 40px;
-                font-weight: 800;
-
-            }
-            .services .container .servs{
-                display: flex;
-                padding: 0px;
-                flex-wrap: wrap;
-                justify-content: space-around;
-
-            }
-            .services .container .servs .serv{
-                border: 2px solid var(--main-color);
-                border-radius: 15px;
-                padding: 15px;
-                text-align: center;
-                width: 22%;
-                transition: all 0.5s ease;
-            }
+    .blog .container .vid .post a {
+        position: absolute;
+        bottom: 15px;
+    }
 }
-@media (min-width:1181px) and (max-width:1300px) {}
+
+
+/* =========================================
+   769px - 992px : Tablet
+   ========================================= */
+@media (min-width: 769px) and (max-width: 992px) {
+
+    /* ABOUT */
+    .about {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 40px;
+    }
+
+    .about .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .container .item1 {
+        width: 55%;
+        height: 400px;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 50px;
+    }
+
+    .about .container .info {
+        width: 80%;
+        margin: 0;
+    }
+
+    /* SERVICES */
+    .services {
+        margin: 80px 0;
+    }
+
+    .services .container .servs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .services .container .servs .serv {
+        width: 42%;
+        margin: 0;
+    }
+
+    /* PORTFOLIO */
+    .portfolio .container .web .item {
+        width: 45%;
+    }
+
+    /* BLOG */
+    .blog {
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 20px;
+    }
+
+    .blog .container .vid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 30px;
+        margin: 0;
+    }
+
+    .blog .container .vid .post {
+        width: 70%;
+        height: auto;
+        min-height: 500px;
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    .blog .container .vid .post a {
+        position: absolute;
+        bottom: 15px;
+    }
+
+    /* CONTACT */
+    .contact .container .form {
+        margin: 30px 10%;
+    }
+
+    .contact .container .form input:nth-of-type(1),
+    .contact .container .form input:nth-of-type(2) {
+        width: 49%;
+    }
+
+    .contact .container .form input:nth-of-type(3),
+    .contact .container .form textarea {
+        width: 99%;
+    }
+}
+
+
+/* =========================================
+   577px - 768px : Large Mobile
+   ========================================= */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    /* ABOUT */
+    .about {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 40px;
+    }
+
+    .about .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .container .item1 {
+        width: 65%;
+        height: 380px;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 50px;
+    }
+
+    .about .container .info {
+        width: 90%;
+        margin: 0;
+    }
+
+    .about .container .info h2 {
+        font-size: 26px;
+    }
+
+    .about .container .info .row .col {
+        width: 50%;
+    }
+
+    .about .container .info .row .col .item h4 {
+        font-size: 15px;
+    }
+
+    .about .container .info .row .col .item p {
+        font-size: 13px;
+    }
+
+    /* SERVICES */
+    .services {
+        margin: 60px 0;
+    }
+
+    .services .container h2 {
+        font-size: 32px;
+    }
+
+    .services .container .servs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .services .container .servs .serv {
+        width: 70%;
+        margin: 0;
+    }
+
+    /* PORTFOLIO */
+    .portfolio .container .web .item {
+        width: 65%;
+    }
+
+    /* BLOG */
+    .blog {
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 15px;
+    }
+
+    .blog .container h2 {
+        font-size: 32px;
+    }
+
+    .blog .container .vid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 25px;
+        margin: 0;
+    }
+
+    .blog .container .vid .post {
+        width: 80%;
+        height: auto;
+        min-height: 480px;
+        position: relative;
+        padding-bottom: 65px;
+    }
+
+    .blog .container .vid .post h3 {
+        font-size: 18px;
+    }
+
+    .blog .container .vid .post a {
+        position: absolute;
+        bottom: 15px;
+    }
+
+    /* CONTACT */
+    .contact {
+        margin: 40px 10px;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .contact .container h2 {
+        font-size: 32px;
+    }
+
+    .contact .container .form {
+        flex-direction: column;
+        margin: 30px 8%;
+    }
+
+    .contact .container .form input,
+    .contact .container .form input:nth-of-type(1),
+    .contact .container .form input:nth-of-type(2),
+    .contact .container .form input:nth-of-type(3),
+    .contact .container .form textarea {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   ≤ 576px : Mobile
+   ========================================= */
+@media (max-width: 576px) {
+
+    /* HOME */
+    .home .content h2 {
+        font-size: 22px;
+    }
+
+    .home .content h1 {
+        font-size: 32px;
+    }
+
+    .home .content p {
+        font-size: 16px;
+    }
+
+    /* NAV */
+    nav .container {
+        padding: 0 15px;
+    }
+
+    nav .container .logo {
+        width: 45px;
+        min-width: 45px;
+    }
+
+    nav .container .links ul {
+        width: 85%;
+        min-width: auto;
+        top: 65px;
+    }
+
+    nav .container .links .burger {
+        width: 42px;
+        height: 38px;
+    }
+
+    /* ABOUT */
+    .about {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 40px;
+    }
+
+    .about .container {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    .about .container .item1 {
+        width: 85%;
+        min-width: auto;
+        height: 320px;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 60px;
+    }
+
+    .about .container .item1 .frame,
+    .about .container .item1 .photo {
+        min-width: auto;
+        min-height: auto;
+    }
+
+    .about .container .info {
+        width: 100%;
+        min-width: auto;
+        margin: 0;
+    }
+
+    .about .container .info h2 {
+        font-size: 22px;
+    }
+
+    .about .container .info p {
+        font-size: 14px;
+    }
+
+    .about .container .info .row .col {
+        width: 100%;
+    }
+
+    .about .container .info .row .col .item {
+        margin: 8px 0;
+    }
+
+    .about .container .info .row .col .item h4 {
+        font-size: 15px;
+    }
+
+    .about .container .info .row .col .item p {
+        font-size: 13px;
+    }
+
+    .about .container .info .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .about .container .info .buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* SERVICES */
+    .services {
+        margin: 50px 0;
+    }
+
+    .services .container h2 {
+        font-size: 28px;
+    }
+
+    .services .container .servs {
+        display: block;
+        padding: 0;
+    }
+
+    .services .container .servs .serv {
+        width: 85%;
+        max-width: 350px;
+        margin: 20px auto;
+    }
+
+    /* PORTFOLIO */
+    .portfolio .container h2 {
+        font-size: 28px;
+    }
+
+    .portfolio .container .web {
+        display: block;
+    }
+
+    .portfolio .container .web .item {
+        width: 85%;
+        max-width: 350px;
+        margin: 20px auto;
+    }
+
+    /* BLOG */
+    .blog {
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 10px;
+    }
+
+    .blog .container h2 {
+        font-size: 28px;
+    }
+
+    .blog .container .vid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 25px;
+        margin: 0;
+    }
+
+    .blog .container .vid .post {
+        width: 92%;
+        height: auto;
+        min-height: 460px;
+        position: relative;
+        padding-bottom: 65px;
+    }
+
+    .blog .container .vid .post h3 {
+        font-size: 17px;
+        margin: 10px 10px 5px;
+    }
+
+    .blog .container .vid .post h4 {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .blog .container .vid .post p {
+        font-size: 14px;
+        margin: 10px;
+        line-height: 22px;
+    }
+
+    .blog .container .vid .post a {
+        position: absolute;
+        bottom: 15px;
+        margin: 10px;
+    }
+
+    /* CONTACT */
+    .contact {
+        margin: 40px 10px;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .contact .container h2 {
+        font-size: 28px;
+    }
+
+    .contact .container .form {
+        flex-direction: column;
+        margin: 30px 5%;
+    }
+
+    .contact .container .form input,
+    .contact .container .form input:nth-of-type(1),
+    .contact .container .form input:nth-of-type(2),
+    .contact .container .form input:nth-of-type(3),
+    .contact .container .form textarea {
+        width: 100%;
+    }
+
+    .contact .container .form textarea {
+        height: 160px;
+    }
+}

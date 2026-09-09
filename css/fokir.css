@@ -184,7 +184,7 @@ nav .container .links ul li:hover::after{
 
 
 
-/* about  */
+/*about*/
 
 .about{
     height: 100vh;
@@ -236,7 +236,6 @@ nav .container .links ul li:hover::after{
     position: relative;
     overflow: hidden ;
     transform: translate(5%,5%);
-
 }
 
 
@@ -253,26 +252,17 @@ nav .container .links ul li:hover::after{
 .about .container .overlay{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     z-index: 4;
     border-radius: 10px;
     top: 100%;
-    transition: 2s ease;
-    transition-delay:3s ;
     padding:0 20px ;
 }
 
-
-
-
-
-
-.about .container .photo:hover .overlay{
-    transition-delay:0s ;
-    top: 0;
-}
 
 
 .about .container .overlay ul{
@@ -280,10 +270,10 @@ nav .container .links ul li:hover::after{
     list-style: none;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap; 
     justify-content: space-around;
-    margin: 50% 0;
+    width: 100%;
 }
 
 
@@ -297,58 +287,9 @@ nav .container .links ul li:hover::after{
     width: 35px;
     text-align: center;
     visibility: hidden;
-    margin: 0 0;
+    opacity: 0;
+    transform: translateY(-20px);
 }
-
-
-
-.about .container .photo .overlay ul li:nth-of-type(1){
-    transition: all 1s ease;
-    transition-delay: 2s;
-}
-
-.about .container .photo:hover .overlay ul li:nth-of-type(1){
-    margin: 10% 0;
-    transition-delay:2s ;
-    visibility: visible;
-
-}
-.about .container .photo .overlay ul li:nth-of-type(2){
-    transition: all 1s ease;
-    transition-delay: 1.5s;
-}
-.about .container .photo:hover .overlay ul li:nth-of-type(2){
-    margin: 10% 0;
-    transition-delay:2.5s ;
-    visibility: visible;
-
-}
-.about .container .photo .overlay ul li:nth-of-type(3){
-       transition: all 1s ease;
-       transition-delay: 1s;
-    }
-    
-    .about .container .photo:hover .overlay ul li:nth-of-type(3){
-        transition-delay: 3s;
-        margin: 10% 0;
-        visibility: visible;
-
-}
-.about .container .photo .overlay ul li:nth-of-type(4){
-       transition: all 1s ease;
-       transition-delay:0.5s ;
-    }
-    .about .container .photo:hover .overlay ul li:nth-of-type(4){
-        margin: 10% 0;
-        transition-delay:3.5s ;
-        visibility: visible;
-
-}
-
-
-
-
-
 
 
 
@@ -435,14 +376,21 @@ display: flex;
     margin-bottom: 5px;
 
 }
-.about .container .info .row .col .item .p{
+.about .container .info .row .col .item p{
     font-size: 15px;
     font-weight: 400;
     color: var(--lightcolor);
     color: aqua;
 
-
-
+}
+.about .container .info .row .col .item p a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.about .container .info .row .col .item p a:hover{
+    text-decoration: underline;
+    color: var(--main-color);
 }
 .about .container .info .buttons{
     display: flex;
@@ -608,7 +556,7 @@ gap: 20px;
     width: 100%;
     position: absolute;
     text-align: center;
-    
+    pointer-events: none;
 
 }
 .portfolio .container .web .item .content::after{
@@ -624,17 +572,15 @@ gap: 20px;
     transform: translate(-50%,-50%);    
     border-radius: 15px; 
     visibility: hidden;
+    opacity: 0;
     transition: all 1s ease;
-    transition-delay:1s ;
-
     
 }
-.portfolio .container .web .item .content:hover::after{
-    transition: all 1.5s ease;
+.portfolio .container .web .item .content.active::after{
     height: 100%;
     width: 100%;
     visibility: visible;
-
+    opacity: 1;
 }
 .portfolio .container .web .item .content h3{
     background-color: var(--main-color);
@@ -643,13 +589,14 @@ gap: 20px;
     position: relative;
     left: 100%;
     z-index: 2;
+    visibility: hidden;
+    opacity: 0;
     transition: all 1s ease;
-    transition-delay:0.5s ;
 }
-.portfolio .container .web .item .content:hover h3{
-    transition: all 1.5s ease;
-    transition-delay: 2s;
+.portfolio .container .web .item .content h3.active{
     left: 0;
+    visibility: visible;
+    opacity: 1;
 }
 
 .portfolio .container .web .item .content a{
@@ -665,14 +612,17 @@ gap: 20px;
     left: 50%;
     transform: translateX(-50%);
     bottom: -40px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: auto;
+    text-decoration: none;
     transition: all 1s ease;
-
     
 }
-.portfolio .container .web .item .content:hover a{
-    transition: all 1.5s ease;
-    transition-delay: 2.5s;
+.portfolio .container .web .item .content a.active{
     bottom: 30px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -808,6 +758,7 @@ background-color: transparent;
 border: 1px solid var(--main-color);
 border-radius: 10px;
 padding-left:10px ;
+color: #fff;
 }
 input::placeholder,textarea::placeholder{
 color: #fff;
@@ -833,8 +784,8 @@ display: block;
 }
 .contact .container .form textarea{
     padding-top:10px ;
+    padding-right:10px;
     height: 200px;
     width: 81%;
     resize: none;
-    color: #fff;
 }
