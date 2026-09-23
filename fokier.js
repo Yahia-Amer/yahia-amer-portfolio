@@ -8,25 +8,36 @@ photos.forEach(photo => {
     let timers = [];
     let hideTimers = [];
 
-    const iconDelay = 700;
-    const iconDuration = 800;
+    const iconDelay = 700;      // الوقت بين كل icon والتاني
+    const iconDuration = 800;   // مدة ظهور/اختفاء الـ icon
     const overlayDuration = 1200;
+
+
+    // =========================
+    // MOUSE ENTER
+    // =========================
 
     photo.addEventListener("mouseenter", () => {
 
+        // لو كان فيه animation قديم بيشتغل
         timers.forEach(timer => clearTimeout(timer));
         hideTimers.forEach(timer => clearTimeout(timer));
 
         timers = [];
         hideTimers = [];
 
+
+        // Overlay يظهر
         overlay.style.transition = `${overlayDuration}ms ease`;
         overlay.style.top = "0";
 
+
+        // نظهر الـ icons واحدة واحدة
         icons.forEach((icon, index) => {
 
             const timer = setTimeout(() => {
 
+                // لو الماوس لسه جوه
                 if (photo.matches(":hover")) {
 
                     icon.style.transition = `
@@ -50,12 +61,20 @@ photos.forEach(photo => {
 
     });
 
+
+    // =========================
+    // MOUSE LEAVE
+    // =========================
+
     photo.addEventListener("mouseleave", () => {
 
+        // وقف أي icons لسه مستنية تظهر
         timers.forEach(timer => clearTimeout(timer));
 
         timers = [];
 
+
+        // نحدد الـ icons اللي ظهرت فعلًا
         const visibleIcons = [];
 
         icons.forEach(icon => {
@@ -65,6 +84,11 @@ photos.forEach(photo => {
             }
 
         });
+
+
+        // =========================
+        // HIDE ICONS IN REVERSE
+        // =========================
 
         visibleIcons.reverse().forEach((icon, index) => {
 
@@ -85,6 +109,11 @@ photos.forEach(photo => {
             hideTimers.push(timer);
         });
 
+
+        // =========================
+        // HIDE OVERLAY
+        // =========================
+
         const overlayDelay =
             visibleIcons.length * iconDelay;
 
@@ -102,7 +131,9 @@ photos.forEach(photo => {
 });
 
 
+// =========================
 // PORTFOLIO SECTION
+// =========================
 
 const portfolioItems = document.querySelectorAll(".portfolio .container .web .item");
 
@@ -120,6 +151,10 @@ portfolioItems.forEach(item => {
 
     const stepDelay = 700;
     const overlayDuration = 1000;
+
+    // =========================
+    // MOUSE ENTER
+    // =========================
 
     item.addEventListener("mouseenter", () => {
 
@@ -142,6 +177,11 @@ portfolioItems.forEach(item => {
         });
 
     });
+
+
+    // =========================
+    // MOUSE LEAVE
+    // =========================
 
     item.addEventListener("mouseleave", () => {
 

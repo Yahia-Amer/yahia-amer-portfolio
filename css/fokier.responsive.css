@@ -1,6 +1,7 @@
 
 @media (max-width: 1200px) {
 
+    /* NAV - show burger */
     nav .container .links .burger {
         background-color: transparent;
         border: var(--main-color) 3px solid;
@@ -53,11 +54,13 @@
 }
 
 
+/* 993px - 1200px : Small Laptop */
 @media (min-width: 993px) and (max-width: 1200px) {
 
     /* ABOUT */
     .about .container {
         width: 95%;
+        flex-wrap: nowrap;
     }
 
     .about .container .item1 {
@@ -93,35 +96,33 @@
 
     /* BLOG */
     .blog {
-        margin: 90px 0;
-    }
-
-    .blog .container {
-        width: 92%;
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 20px;
     }
 
     .blog .container .vid {
-        gap: 25px;
-        margin: auto;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
     }
 
     .blog .container .vid .post {
-        width: calc((100% - 50px) / 3);
-        min-height: 520px;
-        padding-bottom: 75px;
-    }
-
-    .blog .container .vid .post .head {
-        height: 200px;
-        min-height: 200px;
+        width: 30%;
+        height: auto;
+        min-height: 480px;
+        position: relative;
+        padding-bottom: 60px;
     }
 
     .blog .container .vid .post a {
-        bottom: 20px;
+        position: absolute;
+        bottom: 15px;
     }
 }
 
 
+/* 769px - 992px : Tablet */
 @media (min-width: 769px) and (max-width: 992px) {
 
     /* ABOUT */
@@ -148,6 +149,12 @@
         left: 0;
         transform: none;
         margin: 0 0 50px 0;
+        padding: 5%;
+    }
+
+    .about .container .item1 .frame,
+    .about .container .item1 .photo {
+        transform: none;
     }
 
     .about .container .info {
@@ -179,35 +186,31 @@
 
     /* BLOG */
     .blog {
-        margin: 80px 0;
-    }
-
-    .blog .container {
-        width: 90%;
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 20px;
     }
 
     .blog .container .vid {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
-        gap: 35px;
-        margin: auto;
+        gap: 30px;
+        margin: 0;
     }
 
     .blog .container .vid .post {
-        width: 78%;
-        max-width: 520px;
-        min-height: 530px;
-        padding-bottom: 75px;
-    }
-
-    .blog .container .vid .post .head {
-        height: 240px;
-        min-height: 240px;
+        width: 70%;
+        height: auto;
+        min-height: 500px;
+        position: relative;
+        padding-bottom: 70px;
     }
 
     .blog .container .vid .post a {
-        bottom: 20px;
+        position: absolute;
+        bottom: 15px;
     }
 
     /* CONTACT */
@@ -224,14 +227,10 @@
     .contact .container .form textarea {
         width: 99%;
     }
-
-    .contact .container .form button {
-        padding: 11px 28px;
-        font-size: 15px;
-    }
 }
 
 
+/* 577px - 768px : Large Mobile  */
 @media (min-width: 577px) and (max-width: 768px) {
 
     /* ABOUT */
@@ -258,6 +257,12 @@
         left: 0;
         transform: none;
         margin: 0 0 50px 0;
+        padding: 5%;
+    }
+
+    .about .container .item1 .frame,
+    .about .container .item1 .photo {
+        transform: none;
     }
 
     .about .container .info {
@@ -309,11 +314,9 @@
 
     /* BLOG */
     .blog {
-        margin: 70px 0;
-    }
-
-    .blog .container {
-        width: 94%;
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 15px;
     }
 
     .blog .container h2 {
@@ -321,37 +324,29 @@
     }
 
     .blog .container .vid {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
-        gap: 30px;
-        margin: auto;
+        gap: 25px;
+        margin: 0;
     }
 
     .blog .container .vid .post {
-        width: 86%;
-        max-width: 480px;
-        min-height: 510px;
-        padding-bottom: 70px;
-    }
-
-    .blog .container .vid .post .head {
-        height: 220px;
-        min-height: 220px;
-        margin-bottom: 18px;
+        width: 80%;
+        height: auto;
+        min-height: 480px;
+        position: relative;
+        padding-bottom: 65px;
     }
 
     .blog .container .vid .post h3 {
         font-size: 18px;
     }
 
-    .blog .container .vid .post p {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
     .blog .container .vid .post a {
-        bottom: 18px;
+        position: absolute;
+        bottom: 15px;
     }
 
     /* CONTACT */
@@ -377,17 +372,10 @@
     .contact .container .form textarea {
         width: 100%;
     }
-
-    .contact .container .form button {
-        width: 100%;
-        justify-content: center;
-        padding: 12px 20px;
-        font-size: 15px;
-        margin-top: 5px;
-    }
 }
 
 
+/* ≤ 576px : Mobile */
 @media (max-width: 576px) {
 
     /* HOME */
@@ -449,10 +437,12 @@
         left: 0;
         transform: none;
         margin: 0 0 60px 0;
+        padding: 5%;
     }
 
     .about .container .item1 .frame,
     .about .container .item1 .photo {
+        transform: none;
         min-width: auto;
         min-height: auto;
     }
@@ -542,63 +532,52 @@
 
     /* BLOG */
     .blog {
-        margin: 60px 0;
-    }
-
-    .blog .container {
-        width: 96%;
+        height: auto;
+        min-height: 100vh;
+        margin: 40px 10px;
     }
 
     .blog .container h2 {
         font-size: 28px;
     }
 
-    .blog .container .span {
-        margin: 15px 0 35px 0;
-    }
-
     .blog .container .vid {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
         gap: 25px;
-        margin: auto;
+        margin: 0;
     }
 
     .blog .container .vid .post {
-        width: 94%;
-        max-width: 420px;
-        min-height: 490px;
-        padding-bottom: 70px;
-    }
-
-    .blog .container .vid .post .head {
-        height: 200px;
-        min-height: 200px;
-        margin-bottom: 15px;
+        width: 92%;
+        height: auto;
+        min-height: 460px;
+        position: relative;
+        padding-bottom: 65px;
     }
 
     .blog .container .vid .post h3 {
         font-size: 17px;
-        margin: 0 14px 10px;
+        margin: 10px 10px 5px;
     }
 
     .blog .container .vid .post h4 {
         font-size: 13px;
-        margin: 0 14px 8px;
+        margin-left: 10px;
     }
 
     .blog .container .vid .post p {
         font-size: 14px;
-        margin: 0 14px;
+        margin: 10px;
         line-height: 22px;
     }
 
     .blog .container .vid .post a {
-        bottom: 18px;
-        margin: 0 14px;
-        font-size: 14px;
-        padding: 7px 12px;
+        position: absolute;
+        bottom: 15px;
+        margin: 10px;
     }
 
     /* CONTACT */
@@ -627,14 +606,5 @@
 
     .contact .container .form textarea {
         height: 160px;
-    }
-
-    .contact .container .form button {
-        width: 50%;
-        min-width: 155px;
-        justify-content: center;
-        padding: 11px 18px;
-        font-size: 14px;
-        margin-top: 0;
     }
 }
