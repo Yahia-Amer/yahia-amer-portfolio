@@ -83,6 +83,7 @@
         font-size: 14px;
     }
 
+
     /* SERVICES */
     .services .container .servs .serv {
         width: 22%;
@@ -150,11 +151,6 @@
         transform: none;
         margin: 0 0 50px 0;
         padding: 5%;
-    }
-
-    .about .container .item1 .frame,
-    .about .container .item1 .photo {
-        transform: none;
     }
 
     .about .container .info {
@@ -258,11 +254,6 @@
         transform: none;
         margin: 0 0 50px 0;
         padding: 5%;
-    }
-
-    .about .container .item1 .frame,
-    .about .container .item1 .photo {
-        transform: none;
     }
 
     .about .container .info {
@@ -442,7 +433,6 @@
 
     .about .container .item1 .frame,
     .about .container .item1 .photo {
-        transform: none;
         min-width: auto;
         min-height: auto;
     }
